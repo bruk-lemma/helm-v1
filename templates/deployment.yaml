@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-react-app
+  labels:
+    app: my-react-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-react-app
+  template:
+    metadata:
+      labels:
+        app: my-react-app
+    spec:
+      containers:
+      - name: react-app
+        image: bruklemma/k8s-react:1.0.0
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3000
