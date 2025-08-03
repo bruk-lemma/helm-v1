@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: react-app
-        image: bruklemma/k8s-react:1.0.0
+        image: bruklemma/k8s-react:1.0.1
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 3000
+        - containerPort: 7800

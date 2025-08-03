@@ -5,10 +5,11 @@ metadata:
   labels:
     app: my-react-app
 spec:
-  type: ClusterIP
+  type: NodePort
   ports:
-  - port: 3000
-    targetPort: 3000
+  - port: 7800
+    targetPort: 7800
+    nodePort: 30000 # Optional: Specify a port in 30000–32767, or Kubernetes will assign one
     protocol: TCP
   selector:
     app: my-react-app
